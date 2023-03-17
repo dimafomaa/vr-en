@@ -1617,6 +1617,11 @@ body.lock {
 .client-image__slide {
   padding-top: 8px;
 }
+@media (max-width: 860px) {
+  .client-image__slide {
+    padding-top: 20px;
+  }
+}
 .client-image__image {
   position: relative;
 }
@@ -1651,7 +1656,7 @@ body.lock {
   font-size: 20px;
   text-align: center;
   padding: 10px 20px;
-  width: 120px;
+  min-width: 120px;
   border-radius: 2px;
   border: 1px solid var(--white);
   opacity: 0;
@@ -1666,6 +1671,14 @@ body.lock {
 }
 
 .client-image__swiper:hover .client-image__link {
+  opacity: 1;
+}
+
+.client-image__swiper-min:hover .client-image__img {
+  opacity: 0.5;
+}
+
+.client-image__swiper-min:hover .client-image__link {
   opacity: 1;
 }
 
@@ -1699,15 +1712,7 @@ body.lock {
 }
 @media (max-width: 860px) {
   .client__inner {
-    flex-direction: column-reverse;
-    margin-bottom: 50px;
-    padding-bottom: 150px;
-    background: url("../img/client-mac.svg") 0 200px/100% no-repeat;
-  }
-}
-@media (max-width: 660px) {
-  .client__inner {
-    background: url("../img/client-mac.svg") 0 340px/100% no-repeat;
+    display: none;
   }
 }
 .client__swiper {
@@ -1723,7 +1728,7 @@ body.lock {
 }
 @media (max-width: 860px) {
   .client__slide {
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 47px;
   }
 }
@@ -1755,8 +1760,8 @@ body.lock {
 }
 @media (max-width: 860px) {
   .client__items {
-    margin-right: calc(15px + 85 * (100vw - 320px) / 540);
     margin-bottom: 0;
+    margin-right: 20px;
   }
 }
 @media (max-width: 660px) {
@@ -1805,6 +1810,34 @@ body.lock {
   border-radius: 15px;
   margin-top: 20px;
   width: 280px;
+}
+@media (max-width: 660px) {
+  .client__text {
+    width: 100%;
+  }
+}
+
+.client__inner-min {
+  display: none;
+}
+@media (max-width: 860px) {
+  .client__inner-min {
+    display: block;
+    margin-bottom: 50px;
+    padding-bottom: calc(30px + 120 * (100vw - 320px) / 540);
+    background: url("../img/client-mac.svg") 0 212px/100% no-repeat;
+  }
+}
+@media (max-width: 660px) {
+  .client__inner-min {
+    background: url("../img/client-mac.svg") 0 353px/100% no-repeat;
+  }
+}
+
+.client__swiper-min .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
 }
 
 .swiper-button-prev,
@@ -2233,6 +2266,11 @@ body.lock {
   justify-content: center;
   gap: 20px;
 }
+@media (max-width: 460px) {
+  .lang {
+    justify-content: left;
+  }
+}
 .lang span {
   font-size: 20px;
   font-weight: 700;
@@ -2250,6 +2288,11 @@ body.lock {
 
 .copy {
   margin-top: 30px;
+}
+@media (max-width: 460px) {
+  .copy {
+    text-align: left;
+  }
 }
 .copy span {
   transition: all 0.3s ease-in-out;

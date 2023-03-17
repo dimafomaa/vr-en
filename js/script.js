@@ -325,6 +325,8 @@ $(document).ready(function () {
 	});
 });
 
+
+// ============================================================
 let myImageSlider = new Swiper('.client-image__swiper', {
 	slidesPerView: 1,
 	effect: 'fade',
@@ -338,16 +340,46 @@ let myTextSlider = new Swiper('.client__swiper', {
 	navigation: {
 		nextEl: '.client__button-next',
 		prevEl: '.client__button-prev'
-	},
-	pagination: {
-		el: '.client__pagination',
-		clickable: true,
 	}
 });
 
 myImageSlider.controller.control = myTextSlider;
 myTextSlider.controller.control = myImageSlider;
 
+// =============================================================================
+let myImageSliderMin = new Swiper('.client-image__swiper-min', {
+	slidesPerView: 1,
+	effect: 'fade',
+	fadeEffect: {
+		crossFade: true
+	}
+});
+
+let myTextSliderMin = new Swiper('.client__swiper-min', {
+	slidesPerView: 1,
+	
+	breakpoints: {
+		320: {
+			navigation: false,
+			pagination: {
+				el: '.client__pagination',
+				clickable: true,
+			},
+		},
+		860: {
+			navigation: {
+				nextEl: '.client__button-next',
+				prevEl: '.client__button-prev'
+			},
+			pagination: false,
+		}
+	}
+});
+
+myImageSliderMin.controller.control = myTextSliderMin;
+myTextSliderMin.controller.control = myImageSliderMin;
+
+// ===========================================================================
 
 const scrollUp = () => {
 	const scrollUp = document.getElementById('scroll-up')
