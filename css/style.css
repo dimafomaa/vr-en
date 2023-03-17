@@ -1632,11 +1632,18 @@ body.lock {
     height: calc(285px + 215 * (100vw - 860px) / 580);
   }
 }
+@media (max-width: 860px) {
+  .client-image__img {
+    width: calc(250px + 470 * (100vw - 320px) / 540);
+    height: calc(196px + 374 * (100vw - 320px) / 540);
+    border-radius: 0 5px 0 0;
+  }
+}
 .client-image__link {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-72%);
+  transform: translateX(-82%);
   color: var(--white);
   opacity: 0;
   transition: all 0.3s ease-in-out;
@@ -1677,6 +1684,7 @@ body.lock {
   margin-bottom: 50px;
 }
 .client__inner {
+  position: relative;
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -1691,7 +1699,15 @@ body.lock {
 }
 @media (max-width: 860px) {
   .client__inner {
-    display: block;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+    padding-bottom: 150px;
+    background: url("../img/client-mac.svg") 0 200px/100% no-repeat;
+  }
+}
+@media (max-width: 660px) {
+  .client__inner {
+    background: url("../img/client-mac.svg") 0 340px/100% no-repeat;
   }
 }
 .client__swiper {
@@ -1699,22 +1715,32 @@ body.lock {
   flex: 0 1 100%;
   min-width: 0;
 }
-.client__body {
+.client__slide {
+  padding-top: 150px;
+  margin-top: -150px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 860px) {
+  .client__slide {
+    justify-content: space-between;
+    margin-bottom: 47px;
+  }
+}
+.client__body--value {
   margin-left: 50px;
 }
 @media (max-width: 860px) {
-  .client__body {
+  .client__body--value {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
+    margin-left: 0;
   }
 }
-@media (max-width: 650px) {
-  .client__body {
+@media (max-width: 660px) {
+  .client__body--value {
     display: block;
-    text-align: left;
-    width: 100%;
   }
 }
 .client__items {
@@ -1733,7 +1759,7 @@ body.lock {
     margin-bottom: 0;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 660px) {
   .client__items {
     margin-bottom: 20px;
   }
@@ -1741,14 +1767,14 @@ body.lock {
 .client__items--image {
   margin-right: 20px;
 }
-@media (max-width: 690px) {
-  .client__items--image {
-    margin-right: 0;
-  }
+.client__items--image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
 }
-@media (max-width: 690px) {
-  .client__items--image img {
-    max-width: 80%;
+@media (max-width: 660px) {
+  .client__items--image {
+    margin-bottom: 20px;
   }
 }
 .client__items--name {
@@ -1779,6 +1805,41 @@ body.lock {
   border-radius: 15px;
   margin-top: 20px;
   width: 280px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: static;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 0;
+}
+
+.client__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.client__button-prev {
+  background: url("../img/icon/arrow-slide.svg") 0 0/100% no-repeat;
+  transform: rotate(180deg);
+  width: 80px;
+  height: 55px;
+  position: absolute;
+  top: -75px;
+  left: -170px;
+}
+
+.client__button-next {
+  background: url("../img/icon/arrow-slide.svg") 0 0/100% no-repeat;
+  width: 80px;
+  height: 55px;
+  position: absolute;
+  top: -75px;
+  right: 0px;
 }
 
 /*=============================================================================================*/

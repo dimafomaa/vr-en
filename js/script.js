@@ -336,9 +336,13 @@ let myImageSlider = new Swiper('.client-image__swiper', {
 let myTextSlider = new Swiper('.client__swiper', {
 	slidesPerView: 1,
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
+		nextEl: '.client__button-next',
+		prevEl: '.client__button-prev'
 	},
+	pagination: {
+		el: '.client__pagination',
+		clickable: true,
+	}
 });
 
 myImageSlider.controller.control = myTextSlider;
