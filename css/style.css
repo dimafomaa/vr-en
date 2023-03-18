@@ -1646,9 +1646,8 @@ body.lock {
 }
 .client-image__link {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-82%);
+  top: 240px;
+  left: 220px;
   color: var(--white);
   opacity: 0;
   transition: all 0.3s ease-in-out;
@@ -1656,11 +1655,23 @@ body.lock {
   font-size: 20px;
   text-align: center;
   padding: 10px 20px;
-  min-width: 120px;
+  min-width: 180px;
   border-radius: 2px;
   border: 1px solid var(--white);
   opacity: 0;
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1400px) {
+  .client-image__link {
+    top: calc(130px + 110 * (100vw - 860px) / 540);
+    left: calc(91px + 129 * (100vw - 860px) / 540);
+  }
+}
+@media (max-width: 860px) {
+  .client-image__link {
+    top: calc(95px + 185 * (100vw - 320px) / 540);
+    left: calc(35px + 238 * (100vw - 320px) / 540);
+  }
 }
 .client-image__link:hover {
   box-shadow: 0 0 25px var(--white);
