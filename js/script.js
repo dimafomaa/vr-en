@@ -330,6 +330,7 @@ $(document).ready(function () {
 let myImageSlider = new Swiper('.client-image__swiper', {
 	slidesPerView: 1,
 	effect: 'fade',
+	loop: true,
 	fadeEffect: {
 		crossFade: true
 	}
@@ -337,6 +338,7 @@ let myImageSlider = new Swiper('.client-image__swiper', {
 
 let myTextSlider = new Swiper('.client__swiper', {
 	slidesPerView: 1,
+	loop: true,
 	navigation: {
 		nextEl: '.client__button-next',
 		prevEl: '.client__button-prev'
@@ -350,6 +352,7 @@ myTextSlider.controller.control = myImageSlider;
 let myImageSliderMin = new Swiper('.client-image__swiper-min', {
 	slidesPerView: 1,
 	effect: 'fade',
+	loop: true,
 	fadeEffect: {
 		crossFade: true
 	}
@@ -357,7 +360,7 @@ let myImageSliderMin = new Swiper('.client-image__swiper-min', {
 
 let myTextSliderMin = new Swiper('.client__swiper-min', {
 	slidesPerView: 1,
-	
+	loop: true,
 	breakpoints: {
 		320: {
 			navigation: false,
