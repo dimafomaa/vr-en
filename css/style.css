@@ -2314,7 +2314,7 @@ body.lock {
 /*=============================================================================================*/
 .social__button {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
   z-index: 100;
   height: 60px;
@@ -2347,7 +2347,7 @@ body.lock {
 
 .social__link {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
   height: 60px;
   width: 60px;
@@ -2367,46 +2367,46 @@ body.lock {
 }
 
 .social__link.viber.active {
-  bottom: 90px;
+  bottom: 130px;
   right: 20px;
 }
 @media (max-height: 400px) {
   .social__link.viber.active {
     right: 0;
-    bottom: 110px;
+    bottom: 140px;
   }
 }
 
 .social__link.telegram.active {
-  bottom: 160px;
+  bottom: 200px;
   right: 20px;
 }
 @media (max-height: 400px) {
   .social__link.telegram.active {
     right: 58px;
-    bottom: 100px;
+    bottom: 140px;
   }
 }
 
 .social__link.instagram.active {
-  bottom: 230px;
+  bottom: 270px;
   right: 20px;
 }
 @media (max-height: 400px) {
   .social__link.instagram.active {
     right: 100px;
-    bottom: 58px;
+    bottom: 98px;
   }
 }
 
 .social__link.phone.active {
-  bottom: 300px;
+  bottom: 340px;
   right: 20px;
 }
 @media (max-height: 400px) {
   .social__link.phone.active {
     right: 110px;
-    bottom: 0;
+    bottom: 40px;
   }
 }
 
@@ -2444,11 +2444,11 @@ body.lock {
 }
 
 .show-scroll {
-  bottom: 100px;
+  bottom: 140px;
 }
 @media (max-height: 400px) {
   .show-scroll {
-    bottom: 120px;
+    bottom: 150px;
     right: 10px;
   }
 }
