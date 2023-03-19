@@ -2276,11 +2276,6 @@ body.lock {
   justify-content: center;
   gap: 20px;
 }
-@media (max-width: 460px) {
-  .lang {
-    justify-content: left;
-  }
-}
 .lang span {
   font-size: 20px;
   font-weight: 700;
@@ -2298,11 +2293,6 @@ body.lock {
 
 .copy {
   margin-top: 30px;
-}
-@media (max-width: 460px) {
-  .copy {
-    text-align: left;
-  }
 }
 .copy span {
   transition: all 0.3s ease-in-out;

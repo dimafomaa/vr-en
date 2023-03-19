@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 		// отправка формы 1 с помощью AJAX
 		$.ajax({
-			url: 'send-cons.php',
+			url: 'send-mail.php',
 			type: 'POST',
 			data: $(this).serialize(),
 			success: function (data) {
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
 		// отправка формы 2 с помощью AJAX
 		$.ajax({
-			url: 'send-cons.php',
+			url: 'send-mail.php',
 			type: 'POST',
 			data: $(this).serialize(),
 			success: function (data) {
@@ -54,7 +54,7 @@ $(document).ready(function () {
 
 		// отправка формы 3 с помощью AJAX
 		$.ajax({
-			url: 'send-cons.php',
+			url: 'send-mail.php',
 			type: 'POST',
 			data: $(this).serialize(),
 			success: function (data) {
@@ -71,7 +71,7 @@ $(document).ready(function () {
 
 		// отправка формы 4 с помощью AJAX
 		$.ajax({
-			url: 'send-vr.php',
+			url: 'send-mail.php',
 			type: 'POST',
 			data: $(this).serialize(),
 			success: function (data) {
@@ -88,7 +88,7 @@ $(document).ready(function () {
 
 		// отправка формы 5 с помощью AJAX
 		$.ajax({
-			url: 'send-ar.php',
+			url: 'send-mail.php',
 			type: 'POST',
 			data: $(this).serialize(),
 			success: function (data) {
@@ -105,7 +105,7 @@ $(document).ready(function () {
 
 		// отправка формы 1 с помощью AJAX
 		$.ajax({
-			url: 'send-3d.php',
+			url: 'send-mail.php',
 			type: 'POST',
 			data: $(this).serialize(),
 			success: function (data) {
@@ -122,7 +122,7 @@ $(document).ready(function () {
 
 		// отправка формы 1 с помощью AJAX
 		$.ajax({
-			url: 'send-building.php',
+			url: 'send-mail.php',
 			type: 'POST',
 			data: $(this).serialize(),
 			success: function (data) {
@@ -139,7 +139,7 @@ $(document).ready(function () {
 
 		// отправка формы 1 с помощью AJAX
 		$.ajax({
-			url: 'send-marketing.php',
+			url: 'send-mail.php',
 			type: 'POST',
 			data: $(this).serialize(),
 			success: function (data) {
