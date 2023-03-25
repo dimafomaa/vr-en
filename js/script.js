@@ -13,146 +13,25 @@ $(document).click(function (event) {
 
 $(document).ready(function () {
 
-	$('input[type="tel"]').inputmask("+38 (099) 999-99-99");
+	$('input[type="tel"]').inputmask("+38 (999) 999-99-99");
 
-	$('#form1').on('submit', function (e) { // обработчик событий на отправку формы 1
+	$('form').on('submit', function (e) {
 		e.preventDefault(); // предотвращение стандартного поведения формы
+		var form = $(this);
 
-		// отправка формы 1 с помощью AJAX
+		// отправка формы с помощью AJAX
 		$.ajax({
 			url: 'send-mail.php',
 			type: 'POST',
-			data: $(this).serialize(),
+			data: form.serialize(),
 			success: function (data) {
-				$('#form1')[0].reset(); // очистка формы 1
-				// Открываем модальное окно благодарности после успешной отправки формы 1
+				form[0].reset(); // очистка формы
+				// Открываем модальное окно благодарности после успешной отправки формы
 				const thankPopup = document.getElementById('modal-thank');
 				popupOpen(thankPopup);
 			}
 		});
 	});
-
-	$('#form2').on('submit', function (e) { // обработчик событий на отправку формы 2
-		e.preventDefault(); // предотвращение стандартного поведения формы
-
-		// отправка формы 2 с помощью AJAX
-		$.ajax({
-			url: 'send-mail.php',
-			type: 'POST',
-			data: $(this).serialize(),
-			success: function (data) {
-				$('#form2')[0].reset(); // очистка формы 2
-				// Открываем модальное окно благодарности после успешной отправки формы 2
-				const thankPopup = document.getElementById('modal-thank');
-				popupOpen(thankPopup);
-			}
-		});
-	});
-
-	$('#form3').on('submit', function (e) { // обработчик событий на отправку формы 1
-		e.preventDefault(); // предотвращение стандартного поведения формы
-
-		// отправка формы 3 с помощью AJAX
-		$.ajax({
-			url: 'send-mail.php',
-			type: 'POST',
-			data: $(this).serialize(),
-			success: function (data) {
-				$('#form3')[0].reset(); // очистка формы 1
-				// Открываем модальное окно благодарности после успешной отправки формы 1
-				const thankPopup = document.getElementById('modal-thank');
-				popupOpen(thankPopup);
-			}
-		});
-	});
-
-	$('#form4').on('submit', function (e) { // обработчик событий на отправку формы 1
-		e.preventDefault(); // предотвращение стандартного поведения формы
-
-		// отправка формы 4 с помощью AJAX
-		$.ajax({
-			url: 'send-mail.php',
-			type: 'POST',
-			data: $(this).serialize(),
-			success: function (data) {
-				$('#form4')[0].reset(); // очистка формы 1
-				// Открываем модальное окно благодарности после успешной отправки формы 1
-				const thankPopup = document.getElementById('modal-thank');
-				popupOpen(thankPopup);
-			}
-		});
-	});
-
-	$('#form5').on('submit', function (e) { // обработчик событий на отправку формы 1
-		e.preventDefault(); // предотвращение стандартного поведения формы
-
-		// отправка формы 5 с помощью AJAX
-		$.ajax({
-			url: 'send-mail.php',
-			type: 'POST',
-			data: $(this).serialize(),
-			success: function (data) {
-				$('#form5')[0].reset(); // очистка формы 1
-				// Открываем модальное окно благодарности после успешной отправки формы 1
-				const thankPopup = document.getElementById('modal-thank');
-				popupOpen(thankPopup);
-			}
-		});
-	});
-
-	$('#form6').on('submit', function (e) { // обработчик событий на отправку формы 1
-		e.preventDefault(); // предотвращение стандартного поведения формы
-
-		// отправка формы 1 с помощью AJAX
-		$.ajax({
-			url: 'send-mail.php',
-			type: 'POST',
-			data: $(this).serialize(),
-			success: function (data) {
-				$('#form6')[0].reset(); // очистка формы 1
-				// Открываем модальное окно благодарности после успешной отправки формы 1
-				const thankPopup = document.getElementById('modal-thank');
-				popupOpen(thankPopup);
-			}
-		});
-	});
-
-	$('#form7').on('submit', function (e) { // обработчик событий на отправку формы 1
-		e.preventDefault(); // предотвращение стандартного поведения формы
-
-		// отправка формы 1 с помощью AJAX
-		$.ajax({
-			url: 'send-mail.php',
-			type: 'POST',
-			data: $(this).serialize(),
-			success: function (data) {
-				$('#form7')[0].reset(); // очистка формы 1
-				// Открываем модальное окно благодарности после успешной отправки формы 1
-				const thankPopup = document.getElementById('modal-thank');
-				popupOpen(thankPopup);
-			}
-		});
-	});
-
-	$('#form8').on('submit', function (e) { // обработчик событий на отправку формы 1
-		e.preventDefault(); // предотвращение стандартного поведения формы
-
-		// отправка формы 1 с помощью AJAX
-		$.ajax({
-			url: 'send-mail.php',
-			type: 'POST',
-			data: $(this).serialize(),
-			success: function (data) {
-				$('#form8')[0].reset(); // очистка формы 1
-				// Открываем модальное окно благодарности после успешной отправки формы 1
-				const thankPopup = document.getElementById('modal-thank');
-				popupOpen(thankPopup);
-			}
-		});
-	});
-
-	// закрытие модального окна при нажатии на кнопку закрытия
-
 });
 
 
@@ -313,7 +192,7 @@ $(document).ready(function () {
 	// 	});
 	// });
 
-	
+
 	$('.question__block--title').click(function (event) {
 		if ($('.question__block').hasClass('one')) {
 			$('.question__block--title').not($(this)).removeClass('active');
