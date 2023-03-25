@@ -71,9 +71,17 @@ body.lock {
   display: inline-block;
   text-align: center;
 }
-.btn:hover {
-  background-color: var(--white);
-  color: var(--bg);
+@media (min-width: 768px) {
+  .btn:hover {
+    background-color: var(--white);
+    color: var(--bg);
+  }
+}
+@media (max-width: 768px) {
+  .btn:active {
+    background-color: var(--white);
+    color: var(--bg);
+  }
 }
 @media (max-width: 1150px) {
   .btn {
@@ -266,8 +274,15 @@ body.lock {
   position: relative;
   transition: all 0.3s ease-in-out;
 }
-.menu__link:hover {
-  color: var(--purple);
+@media (min-width: 768px) {
+  .menu__link:hover {
+    color: var(--purple);
+  }
+}
+@media (max-width: 768px) {
+  .menu__link:active {
+    color: var(--purple);
+  }
 }
 @media (max-width: 860px) {
   .menu__link {
@@ -433,14 +448,8 @@ body.lock {
   line-height: 1.18;
   min-height: 61px;
 }
-/* @media (max-width: 915px) {
-  .advantages__item--title {
-    margin-bottom: 20px;
-  }
-} */
 @media (max-width: 992px) {
   .advantages__item--title {
-    /* min-height: 30px; */
     font-size: calc(22px + 4 * (100vw - 320px) / 540);
   }
 }
@@ -486,7 +495,7 @@ body.lock {
   padding: 0 50px;
   grid-template-columns: repeat(3, 1fr);
 }
-@media (max-width: 1200px) {
+@media (max-width: 1215px) {
   .service__row {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -516,20 +525,29 @@ body.lock {
 .service__item {
   padding: 24px;
   max-width: 400px;
-  min-width: 312px;
   min-height: 350px;
   height: auto;
   border-radius: 15px;
   background: linear-gradient(132.24deg, #323339 1.87%, #202125 100%);
   transition: all 0.3s ease-in-out;
 }
-.service__item:hover {
-  background: linear-gradient(132.24deg, #413AA3 1.87%, #335EA8 100%);
+@media (min-width: 768px) {
+  .service__item:hover {
+    background: linear-gradient(132.24deg, #413AA3 1.87%, #335EA8 100%);
+  }
+  .service__item:hover .service__item--link {
+    transform: translateX(5px);
+  }
 }
-.service__item:hover .service__item--link {
-  transform: translateX(5px);
+@media (max-width: 768px) {
+  .service__item:active {
+    background: linear-gradient(132.24deg, #413AA3 1.87%, #335EA8 100%);
+  }
+  .service__item:active .service__item--link {
+    transform: translateX(5px);
+  }
 }
-@media (max-width: 1150px) {
+@media (max-width: 1215px) {
   .service__item {
     max-width: 100%;
   }
@@ -866,7 +884,7 @@ body.lock {
 .tips-6 {
   position: absolute;
   top: 220px;
-  left: 685px;
+  left: 684px;
 }
 @media (max-width: 900px) {
   .tips-6 {
@@ -923,8 +941,8 @@ body.lock {
 
 .tips-8 {
   position: absolute;
-  top: 507px;
-  left: 421px;
+  top: 505px;
+  left: 445px;
 }
 @media (max-width: 900px) {
   .tips-8 {
@@ -2091,24 +2109,42 @@ body.lock {
   }
 }
 .news__item {
+  flex: 0 1 30%;
   display: flex;
   flex-direction: column;
-  flex: 0 1 30%;
   color: var(--white);
 }
-.news__item:hover .news__image {
-  box-shadow: #5225f3 0px 0px 8px;
+@media (min-width: 768px) {
+  .news__item:hover .news__image {
+    box-shadow: #5225f3 0px 0px 8px;
+  }
+  .news__item:hover .news__img {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  .news__item:hover span {
+    opacity: 1;
+    visibility: visible;
+  }
+  .news__item:hover .news__date span {
+    transform: translateX(-10px);
+  }
 }
-.news__item:hover .news__img {
-  transform: scale(1.05);
-  opacity: 0.7;
-}
-.news__item:hover span {
-  opacity: 1;
-  visibility: visible;
-}
-.news__item:hover .news__date span {
-  transform: translateX(-10px);
+@media (max-width: 768px) {
+  .news__item:active .news__image {
+    box-shadow: #5225f3 0px 0px 8px;
+  }
+  .news__item:active .news__img {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  .news__item:active span {
+    opacity: 1;
+    visibility: visible;
+  }
+  .news__item:active .news__date span {
+    transform: translateX(-10px);
+  }
 }
 @media (max-width: 580px) {
   .news__item {
@@ -2145,7 +2181,7 @@ body.lock {
   font-size: 20px;
   line-height: 1.16;
   margin-bottom: 10px;
-  min-height: 50px;
+  min-height: 47px;
 }
 .news__text {
   font-family: "Roboto", sans-serif;
@@ -2300,6 +2336,12 @@ body.lock {
 
 .copy {
   margin-top: 30px;
+}
+@media (max-width: 450px) {
+  .copy {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
 }
 .copy span {
   transition: all 0.3s ease-in-out;
